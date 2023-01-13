@@ -1,6 +1,6 @@
 # my_chatgpt
 
-A new Flutter project.
+You will find talk of the town ChatGPT sample with Clean Architecture.
 
 ## Getting Started
 

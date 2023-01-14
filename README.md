@@ -1,4 +1,4 @@
-# my_chatgpt
+# My ChatGPT Sample
 
 You will find talk of the town ChatGPT sample with Clean Architecture.
 

@@ -11,21 +11,20 @@ class HomePage extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
               children: [
-                SizedBox(
-                  height: 60,
+                Image.asset(
+                  "assets/images/app_logo.png",
+                  height: 80,
                 ),
-                Image.asset("assets/images/app_logo.png"),
-              ],
-            ),
-            Column(
-              children: [
+                SizedBox(
+                  height: 30,
+                ),
                 HomeButtonWidget(
-                  textData: "Image Generation - OpenAI",
+                  textData: "Image Generation Demo",
                   iconData: Icons.image_outlined,
                   onTap: () {
                     Navigator.pushNamed(context, PageConst.ImageGenerationPage);
@@ -35,17 +34,30 @@ class HomePage extends StatelessWidget {
                   height: 30,
                 ),
                 HomeButtonWidget(
-                  textData: "Text Completion - OpenAI",
+                  textData: "Text Completion Demo",
                   iconData: Icons.text_fields_outlined,
                   onTap: () {
                     Navigator.pushNamed(context, PageConst.TextCompletionPage);
                   },
                 ),
+                SizedBox(
+                  height: 30,
+                ),
+                HomeButtonWidget(
+                  textData: "About App",
+                  iconData: Icons.info,
+                  onTap: () {
+                    Navigator.pushNamed(context, PageConst.AboutAppPage);
+                  },
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "ChatGPT: Optimizing Language Models for Dialogue",
+                  style: TextStyle(color: Colors.grey),
+                ),
               ],
-            ),
-            Text(
-              "ChatGPT: Optimizing Language Models for Dialogue",
-              style: TextStyle(color: Colors.grey),
             ),
           ],
         ),

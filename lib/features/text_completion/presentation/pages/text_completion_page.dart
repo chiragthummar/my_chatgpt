@@ -55,7 +55,7 @@ class _TextCompletionPageState extends State<TextCompletionPage> {
                 if (textCompletionState is TextCompletionLoaded) {
                   final choicesData =
                       textCompletionState.textCompletionModel.choices;
-
+                  print('Choices Data ${choicesData.length}');
                   return ListView.builder(
                     itemCount: choicesData.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -113,6 +113,7 @@ class _TextCompletionPageState extends State<TextCompletionPage> {
           SearchTextFieldWidget(
               textEditingController: _searchTextController,
               onTap: () {
+                _hideKeyboard();
                 BlocProvider.of<TextCompletionCubit>(context)
                     .textCompletion(query: _searchTextController.text)
                     .then((value) => _clearTextField());
@@ -129,5 +130,9 @@ class _TextCompletionPageState extends State<TextCompletionPage> {
     setState(() {
       _searchTextController.clear();
     });
+  }
+
+  void _hideKeyboard() {
+    FocusScope.of(context).requestFocus(FocusNode());
   }
 }

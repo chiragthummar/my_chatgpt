@@ -14,7 +14,7 @@ class HomeButtonWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 95,
+        height: 65,
         width: double.infinity,
         alignment: Alignment.centerLeft,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -35,7 +35,7 @@ class HomeButtonWidget extends StatelessWidget {
             Text(textData,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 14,
                     fontWeight: FontWeight.w600)),
           ],
         ),

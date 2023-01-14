@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_chatgpt/features/about_us/presentation/pages/about_us.dart';
 import '../app_constant/page_constant.dart';
 import '../../text_completion/presentation/pages/text_completion_page.dart';
 import '../../image_generations/presentation/pages/image_generations.dart';
@@ -24,6 +25,12 @@ class OnGenerateRoute {
         {
           return pageRouteBuilder(
             widget: ImageGenerationPage(),
+          );
+        }
+      case PageConst.AboutAppPage:
+        {
+          return pageRouteBuilder(
+            widget: AboutUs(),
           );
         }
       default:
